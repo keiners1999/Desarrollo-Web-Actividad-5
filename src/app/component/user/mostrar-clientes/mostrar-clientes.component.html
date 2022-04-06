@@ -1,0 +1,17 @@
+<clr-datagrid>
+    <clr-dg-column [clrDgField]="'id'">User ID</clr-dg-column>
+    <clr-dg-column [clrDgField]="'nombres'">Nombre</clr-dg-column>
+    <clr-dg-column [clrDgField]="'apellidos'">Apellidos</clr-dg-column>
+    <clr-dg-column [clrDgField]="'direccion'">Dirección</clr-dg-column>
+    <clr-dg-column [clrDgField]="'telefono'">Teléfono</clr-dg-column>
+    
+    <clr-dg-row *clrDgItems="let user of users">
+      <clr-dg-cell>{{user.id}}</clr-dg-cell>
+      <clr-dg-cell>{{user.nombres}}</clr-dg-cell>
+      <clr-dg-cell>{{user.apellidos}}</clr-dg-cell>
+      <clr-dg-cell>{{user.direccion}}</clr-dg-cell>
+      <clr-dg-cell>{{user.telefono}}</clr-dg-cell>
+    </clr-dg-row>
+  
+    <clr-dg-footer>{{users.length}} users</clr-dg-footer>
+  </clr-datagrid>
